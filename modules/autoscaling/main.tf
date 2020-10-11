@@ -40,7 +40,7 @@ resource "aws_autoscaling_group" "webserver" {
   max_size = 3
   //vpc_zone_identifier = var.base.vpc.private_subnets
   vpc_zone_identifier = var.base.vpc.public_subnets
-  target_group_arns   = var.group == "green" ? var.base.target_group_arns.green : var.base.target_group_arns.blue
+  target_group_arns   = var.label == "green" ? var.base.target_group_arns.green : var.base.target_group_arns.blue
   launch_template {
     id      = aws_launch_template.webserver.id
     version = aws_launch_template.webserver.latest_version
