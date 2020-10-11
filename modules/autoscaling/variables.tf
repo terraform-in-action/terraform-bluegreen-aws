@@ -3,7 +3,7 @@ variable "ssh_keypair" {
   type    = string
 }
 
-variable "group" {
+variable "label" {
   type = string
 }
 
