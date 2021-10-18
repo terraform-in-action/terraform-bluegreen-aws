@@ -43,7 +43,7 @@ module "vpc" {
 }
 
 module "lb_sg" {
-  source = "scottwinkler/sg/aws"
+  source = "terraform-in-action/sg/aws"
   vpc_id = module.vpc.vpc_id
   ingress_rules = [{
     port        = 80
@@ -52,7 +52,7 @@ module "lb_sg" {
 }
 
 module "webserver_sg" {
-  source = "scottwinkler/sg/aws"
+  source = "terraform-in-action/sg/aws"
   vpc_id = module.vpc.vpc_id
   ingress_rules = [
     {
