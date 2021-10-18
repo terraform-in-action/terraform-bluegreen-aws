@@ -1,6 +1,6 @@
 #create instance and autoscaling group and lb listeners
 module "iam_instance_profile" {
-  source  = "scottwinkler/iip/aws"
+  source  = "terraform-in-action/iip/aws"
   actions = ["logs:*"]
 }
 
